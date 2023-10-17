@@ -131,3 +131,8 @@ function MostPopularCourse() {
             }
         });
 }
+
+$(document).ready(function() {
+    GetAllStudents();
+    
+});
