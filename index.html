@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center" id="title">Student Management</h1>
+
+    <!-- Student Form -->
+    <div class="card mt-4">
+        <div class="card-header">Add Student</div>
+        <div class="card-body">
+            <form id="StudentForm">
+                <div class="form-group">
+                    <label>First Name:</label>
+                    <input type="text" id="fName" class="form-control">
+                </div>
+				<div class="form-group">
+                    <label>Last Name:</label>
+                    <input type="text" id="lName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Age:</label>
+                    <input type="number" id="stdAge" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Coure ID:</label>
+                    <input type="text" id="stdCourseID" class="form-control">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="AddStudent()">Add Student</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Age of a Student -->
+    <div class="card mt-4">
+        <div class="card-header">Update Age of a Student</div>
+        <div class="card-body">
+            <form id="UpdateAge">
+                <div class="form-group">
+                    <label>Course ID:</label>
+                    <input type="text" id="C_ID_update_age" class="form-control">
+                </div>
+				<div class="form-group">
+                    <label>New Age:</label>
+                    <input type="text" id="newage" class="form-control">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="UpdateStudent()">Update Age</button>
+            </form>
+        </div>
+    </div>
+
+
+	<!-- Delete a Student -->
+    <div class="card mt-4">
+        <div class="card-header">Delete a Student</div>
+        <div class="card-body">
+            <form id="DeleteStd">
+                <div class="form-group">
+                    <label>Course ID:</label>
+                    <input type="text" id="C_ID_DEL" class="form-control">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="DeleteStudent()">Delete</button>
+            </form>
+        </div>
+    </div>
+	
+	<!-- List all Students -->
+    <div class="card mt-4">
+        <div class="card-header">List all Students</div>
+        <div class="card-body">
+            <form id="getallstds">
+                <button type="button" class="btn btn-primary" onclick="GetAllStudents()">List All Students</button>
+            </form>
+        </div>
+    </div>
+	
+    <!-- List all Students over age 20 -->
+    <div class="card mt-4">
+        <div class="card-header">List all Students older than 20</div>
+        <div class="card-body">
+            <form id="getallstds>20">
+                <button type="button" class="btn btn-primary" onclick="OldThan20()">List</button>
+            </form>
+        </div>
+    </div>
+	
+	
+	<!-- List all Students in a specific Course-->
+    <div class="card mt-4">
+        <div class="card-header">List all Students in a Specific Course</div>
+        <div class="card-body">
+            <form id="specificcoursestds">
+				<div class="form-group">
+                    <label>Course Name:</label>
+                    <input type="text" id="cName" class="form-control">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="Specific_Course()">List</button>
+            </form>
+        </div>
+    </div>
+	
+	<!-- Most Popular Course-->
+    <div class="card mt-4">
+        <div class="card-header">The Most Popular Course</div>
+        <div class="card-body">
+            <form id="mostpopcourse">
+                <button type="button" class="btn btn-primary" onclick="MostPopularCourse()">Find</button>
+            </form>
+        </div>
+    </div>
+	
+	
+	<!-- Student List -->
+    <div class="card mt-4">
+        <div class="card-header">Student List</div>
+        <ul id="studentList" class="list-group list-group-flush"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
